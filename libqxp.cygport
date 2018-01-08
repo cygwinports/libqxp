@@ -1,0 +1,25 @@
+NAME="libqxp"
+VERSION=0.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="QuarkXPress import filter library"
+DESCRIPTION="Libqxp is a library that parses the file format of QuarkXPress
+documents."
+HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libqxp"
+SRC_URI="http://dev-www.libreoffice.org/src/libqxp/libqxp-${VERSION}.tar.xz"
+SRC_DIR="libqxp-${VERSION}"
+PATCH_URI="
+	0.0.1-ldflags.patch
+	0.0.1-vpath.patch
+"
+
+PKG_NAMES="libqxp-tools ${NAME}0.0_0 ${NAME}0.0-devel ${NAME}-doc"
+libqxp_tools_CATEGORY="Graphics"
+libqxp_tools_SUMMARY="QuarkXPress file converters"
+libqxp_tools_CONTENTS="usr/bin/*.exe"
+libqxp0_0_0_SUMMARY="${SUMMARY} (runtime)"
+libqxp0_0_0_CONTENTS="--exclude=html usr/bin/*-0.0-0.dll usr/share/doc/"
+libqxp0_0_devel_SUMMARY="${SUMMARY} (development)"
+libqxp0_0_devel_CONTENTS="usr/include/ usr/lib/"
+libqxp_doc_SUMMARY="${SUMMARY} (API documentation)"
+libqxp_doc_CONTENTS="usr/share/doc/${NAME}/html/"

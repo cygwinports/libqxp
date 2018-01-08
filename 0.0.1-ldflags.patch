@@ -1,0 +1,10 @@
+--- origsrc/libqxp-0.0.1/src/lib/Makefile.am	2017-09-08 11:39:27.000000000 -0500
++++ src/libqxp-0.0.1/src/lib/Makefile.am	2018-01-08 11:57:39.535643600 -0600
+@@ -1,6 +1,6 @@
+ ## -*- Mode: make; tab-width: 4; indent-tabs-mode: tabs -*-
+ 
+-if PLATFORM_WIN32
++if OS_WIN32
+ version_info = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -avoid-version
+ else
+ version_info = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
