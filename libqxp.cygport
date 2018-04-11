@@ -1,6 +1,6 @@
 NAME="libqxp"
 VERSION=0.0.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="QuarkXPress import filter library"
 DESCRIPTION="Libqxp is a library that parses the file format of QuarkXPress
